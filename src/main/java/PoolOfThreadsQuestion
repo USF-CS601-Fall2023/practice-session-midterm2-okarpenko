@@ -1,0 +1,2 @@
+Briefly explain the benefit of using a pool of threads as opposed
+to creating/destroying threads on the fly.
