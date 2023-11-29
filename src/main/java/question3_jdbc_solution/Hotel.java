@@ -1,4 +1,4 @@
-package question2_servlet;
+package question3_jdbc_solution;
 
 /** A class that represents a hotel. */
 public final class Hotel {
@@ -14,8 +14,8 @@ public final class Hotel {
 
     @Override
     public String toString() {
-        return name + System.lineSeparator() +
-                id + System.lineSeparator() +
+        return  id + System.lineSeparator() +
+                name + System.lineSeparator() +
                 address + System.lineSeparator();
     }
 }

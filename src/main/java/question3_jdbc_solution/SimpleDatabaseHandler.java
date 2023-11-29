@@ -1,4 +1,4 @@
-package question3_jdbc;
+package question3_jdbc_solution;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -60,10 +60,11 @@ public class SimpleDatabaseHandler {
 
 		PreparedStatement sql; // prepared statement
 		try (Connection dbConnection = DriverManager.getConnection(uri, login)) {
-			sql = dbConnection.prepareStatement(""); // FILL IN sql code in the prepared statement
-			// FILL IN CODE: set the parameter in the prepared statement
-
+			sql = dbConnection.prepareStatement("insert into history (hotelId) VALUES (?);"); // FILL IN sql code in the prepared statement
+			sql.setString(1, id);
 			sql.executeUpdate();
+			// Note: assumes the table "history" already exists
+			// Also, before you run this example, you need to update database.properties
 		}
 		catch(SQLException e) {
 			System.out.println(e);

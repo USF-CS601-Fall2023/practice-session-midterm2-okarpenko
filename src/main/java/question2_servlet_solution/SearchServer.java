@@ -1,10 +1,7 @@
-package question2_servlet;
+package question2_servlet_solution;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
-import solution.servletQuestion.Hotel;
-import solution.servletQuestion.HotelData;
-import solution.servletQuestion.SearchServlet;
 
 public class SearchServer {
     public static final int PORT = 8080;
@@ -18,9 +15,8 @@ public class SearchServer {
 
         Server server = new Server(PORT);
         ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        handler.setAttribute("hotelData", hdata);
         handler.addServlet(SearchServlet.class, "/search");
-        // FILL IN CODE: add HotelData as an attribute of the ServletContextHandler
-
         server.setHandler(handler);
         try {
             server.start();

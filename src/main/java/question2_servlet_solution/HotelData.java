@@ -1,6 +1,7 @@
-package question2_servlet;
+package question2_servlet_solution;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /** A class that stores the hotel info in a map */
 public class HotelData {

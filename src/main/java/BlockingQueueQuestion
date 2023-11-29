@@ -1,2 +1,6 @@
 Refer to the BlockingQueue example we discussed in class.
 Explain why the methods enqueue and dequeue need to be synchronized?
+
+Answer:
+To protect access to shared data, the queue implemented using a LinkedList.
+When one thread is enqueuing an element, another thread should not be dequeuing.

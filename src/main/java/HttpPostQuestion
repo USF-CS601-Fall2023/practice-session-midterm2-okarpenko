@@ -3,3 +3,10 @@ courses.html. Use 1.1 version of HTTP protocol. Pass two parameters:
 • semester with the value of Fall
 • year with the value of 2023
 
+Answer: POST sends the data in the body of the request:
+
+POST / HTTP/1.1
+Host: www.university.edu
+Connection: close
+
+semester="Fall"&year=2023

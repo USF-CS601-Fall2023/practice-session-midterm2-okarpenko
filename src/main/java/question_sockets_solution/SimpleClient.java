@@ -1,4 +1,4 @@
-package question_sockets;
+package question_sockets_solution;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -16,8 +16,8 @@ public class SimpleClient extends Thread {
 	public void run() {
 		System.out.println("Client: Started...");
 		try (Socket socket = new Socket("localhost", Server.PORT);
-			 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			 PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+             PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 		)
 		{
 			String input;
