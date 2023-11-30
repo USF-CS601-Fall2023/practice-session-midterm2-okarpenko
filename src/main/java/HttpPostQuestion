@@ -5,7 +5,7 @@ courses.html. Use 1.1 version of HTTP protocol. Pass two parameters:
 
 Answer: POST sends the data in the body of the request:
 
-POST / HTTP/1.1
+POST /courses.html HTTP/1.1
 Host: www.university.edu
 Connection: close
 
